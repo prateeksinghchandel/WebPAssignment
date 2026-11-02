@@ -1,0 +1,129 @@
+{
+  "info": {
+    "_postman_id": "d1e78bbc-a49e-41fc-972d-44a6cb1ab71b",
+    "name": "crud",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "59405695",
+    "_collection_link": "https://go.postman.co/collection/59405695-d1e78bbc-a49e-41fc-972d-44a6cb1ab71b?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "create",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Emma\",\r\n    \"description\": \"A strong Healer\",\r\n    \"age\": \"27\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/v1/posts/create",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "v1",
+            "posts",
+            "create"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get all Posts",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:4000/api/v1/posts/getPosts",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "v1",
+            "posts",
+            "getPosts"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update post",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Emma\",\r\n    \"description\": \"A super strong Healer\",\r\n    \"age\": 27\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:4000/api/v1/posts/update/6ae89e603ffac12af8d2bec1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "v1",
+            "posts",
+            "update",
+            "6ae89e603ffac12af8d2bec1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete Post",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:4000/api/v1/posts/delete/6ae89e603ffac12af8d2bec1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "api",
+            "v1",
+            "posts",
+            "delete",
+            "6ae89e603ffac12af8d2bec1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
