@@ -2,7 +2,7 @@ import {User} from "../models/user.model.js";
 
 const regesterUser= async (req, res) => {
     try{
-        const {usernme, email, password}=req.body;
+        const {username, email, password}=req.body;
 
         //basic validation
 
@@ -29,6 +29,27 @@ const regesterUser= async (req, res) => {
         res.status(500).json({message: "Internal Server Error", error:error.message});
     }
 };
+
+const loginUser= async (req, res) =>{
+    try{
+
+        //checking if the user already exists
+        const{email, password}= req.body;
+
+        const user=await User.findOne({
+            email: email.toLowerCase()
+        });
+
+        if (!user)return res.status(400).json({
+            message: "User not found"
+        });
+
+         
+    } catch (error){
+
+    }
+}
+
 export {
     regesterUser
 }
