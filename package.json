@@ -1,0 +1,27 @@
+{
+  "name": "webpassignment",
+  "version": "1.0.0",
+  "description": "a tutorial follow by prateek",
+  "homepage": "https://github.com/prateeksinghchandel/WebPAssignment#readme",
+  "bugs": {
+    "url": "https://github.com/prateeksinghchandel/WebPAssignment/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prateeksinghchandel/WebPAssignment.git"
+  },
+  "license": "ISC",
+  "author": "Prateek",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node backend/src/index.js",
+    "dev":"nodemon backend/src/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "mongoose": "^9.11.4",
+    "nodemon": "^3.1.14"
+  }
+}
